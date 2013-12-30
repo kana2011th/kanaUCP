@@ -1,4 +1,6 @@
-kanaUCP
+kanaUCP by kana2011th
 =======
 
-Minecraft Website System
+ระบบเว็บที่เขียนด้วย php เป็นส่วนใหญ่
+จะไม่มีการนำ Source Code นี้นำไปขาย
+ทุกคนมีส่วนร่วมในการเขียนเว็บ
