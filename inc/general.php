@@ -16,11 +16,7 @@ class cmsGeneral {
     private $general;
 
     public function isAjaxReq() {
-        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-            return true;
-        } else {
-            return false;
-        }
+        return ($_SERVER["HTTP_X_REQUESTED_WITH"] == "xmlhttprequest")? true:false;
     }
 
 }
