@@ -5,18 +5,8 @@ $config["d"]["footer"] = "footer";
 $config["d"]["svname"] = "MC:RE";
 $config["d"]["header"] = "header";
 
+error_reporting(E_ERROR);
+include 'inc/include.inc.php';
 
-
-
-
-
-
-
-
-
-
-
-
-include 'inc/general.php';
-$cms = new cmsGeneral();
+$cms->db->execDB();
 ?>

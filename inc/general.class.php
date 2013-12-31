@@ -11,12 +11,15 @@
  *
  * @author kana2011th
  */
-class cmsGeneral {
 
+class cmsGeneral {
     private $general;
 
     public function isAjaxReq() {
         return ($_SERVER["HTTP_X_REQUESTED_WITH"] == "xmlhttprequest")? true:false;
     }
-
+    
+    public function getSVData($d){
+        return $config["d"][$d];
+    }
 }
