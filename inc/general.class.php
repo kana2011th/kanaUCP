@@ -22,4 +22,13 @@ class cmsGeneral {
     public function getSVData($d){
         return $config["d"][$d];
     }
+    public function getSaltSHA($d){
+        $sha_info = explode("$", $d);
+        if( $sha_info[1] === "SHA" ) {
+            $result["salt"] = $sha_info[2];
+            $result["password"] = $sha_info[3];
+            return $result;
+        }
+    }
 }
+$cms->ge = new cmsGeneral();

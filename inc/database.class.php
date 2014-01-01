@@ -20,7 +20,10 @@ class cmsDatabase {
 
     public function execDB($SQL) {
         $db = $this->connectDB();
-        return $db->prepare($statement)->execute();
+        $_db = $db->prepare($SQL);
+        $_db->execute();
+        return $_db;
     }
 
 }
+$cms->db = new cmsDatabase;
