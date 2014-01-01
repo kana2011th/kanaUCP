@@ -1,10 +1,6 @@
 <?php
-//config
-$config["d"]["header"] = "header";
-$config["d"]["footer"] = "footer";
-$config["d"]["svname"] = "MC:RE";
-$config["d"]["header"] = "header";
+session_start();
 error_reporting(E_ERROR);
-include 'inc/include.inc.php';
+include '/inc/inc/include.inc.php';
 
 ?>

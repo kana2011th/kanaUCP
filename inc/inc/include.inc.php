@@ -6,6 +6,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include 'general.class.php';
-include 'database.class.php';
-include 'account.class.php';
+
+require '/settings.php';
+ 
+include '/inc/class/general.class.php';
+include '/inc/class/database.class.php';
+include '/inc/class/account.class.php';

@@ -19,7 +19,7 @@ class cmsAccount {
         include_once 'database.class.php';
         $cms->db = new cmsDatabase;
         $res = $cms->db->execDB("SELECT * FROM `authme` WHERE username='" . $user . "'");
-        if ($res) {
+        if ($res->rowCount() == 1) {
             $_userdata = $res->fetch(PDO::FETCH_ASSOC);
             //check user and pass
             if ($_userdata["username"] == $user && $this->checkPassword($pass, $_userdata["password"])) {
@@ -39,7 +39,9 @@ class cmsAccount {
         return $hashed == $realpass ? true : false;
     }
     
-    private function createUserData(){
+    private function createUserData($username,$lname,$fname,$fbname){
+        include_once 'database.class.php';
+        $cms->db = new cmsDatabase;
         
     }
 }
