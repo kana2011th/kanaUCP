@@ -12,7 +12,7 @@ class cmsDatabase {
 
     private function connectDB() {
         try {
-            return new PDO("mysql:host=localhost;dbname=authme", "root", "kana2011");
+            return new PDO(DB_DRIVER.":host=localhost;dbname=".DB_DATABASE, DB_USERNAME, DB_PASSWORD);
         } catch (PDOException $e) {
             die("DATABASE ERROR! <br>Message:" . $e->getMessage());
         }
